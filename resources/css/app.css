@@ -1,0 +1,17 @@
+/* CUSTOM FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Teko&display=swap');
+
+/* TAILWIND IMPORTS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CUSTOM CSS */
+.roboto {
+	font-family: 'Roboto Slab', serif;
+}
+
+.teko {
+	font-family: 'Teko', sans-serif;
+}
