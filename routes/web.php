@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerArticle;
 use App\Http\Controllers\ControllerSearch;
 use App\Http\Controllers\ControllerUser;
+use App\Http\Controllers\ControllerSitemap;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,7 @@ use App\Http\Controllers\ControllerUser;
 
 Route::get('/', [ControllerArticle::class, 'index']);
 
-Route::get('/categories', function() {
-    return view('categories');
-});
+Route::get('/categories', [ControllerArticle::class, 'categories']);
 
 Route::get('/create', [ControllerArticle::class, 'create'])->middleware('auth');
 Route::post('/create', [ControllerArticle::class, 'store']);
@@ -30,6 +29,9 @@ Route::get('/search', [ControllerSearch::class, 'index']);
 // Route::get('/celebrity/{slug}', [ControllerArticle::class, 'show']);
 
 Route::get('/article/{article:slug}', [ControllerArticle::class, 'show']);
+Route::get('/profile/{article:slug}', [ControllerArticle::class, 'show']);
+
+Route::get('sitemap.xml', [ControllerSitemap::class, 'index']);
 
 // Register, Sign in and Sign out
 Route::get('/register', [ControllerUser::class, 'create'])->middleware('guest');

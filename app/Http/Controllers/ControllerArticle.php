@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
-use Image;
 use App\Models\Article;
 use Auth;
 
@@ -59,6 +58,7 @@ class ControllerArticle extends Controller
             'sub_category' => 'required',
             'slug' => ['required', Rule::unique('articles', 'slug')],
             'img_url' => 'required',
+            'img_credit' => 'required',
             'full_name' => 'nullable',
             'dob' => 'nullable',
             'profession' => 'nullable',
@@ -82,5 +82,13 @@ class ControllerArticle extends Controller
             ->where('id', '!=', $article->id)
             ->take(3)
             ->get(); 
+    }
+
+    public function categories(){
+        return view('categories',[
+            'categories' => Article::distinct()
+            ->orderBy('sub_category')
+            ->get('sub_category')
+        ]);
     }
 }

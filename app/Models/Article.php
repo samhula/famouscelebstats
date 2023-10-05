@@ -9,7 +9,7 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'category', 'sub_category', 'slug', 'img_url', 'full_name', 'dob', 'profession', 'nationality', 'net_worth', 'height', 'content', 'home_articles'];
+    protected $fillable = ['title', 'description', 'category', 'sub_category', 'slug', 'img_url', 'img_credit', 'full_name', 'dob', 'profession', 'nationality', 'net_worth', 'height', 'content', 'home_articles'];
 
     public function scopeFilter($query, array $filters){
         // if($filters['tag'] ?? false){
@@ -21,4 +21,4 @@ class Article extends Model
             $query->where('title', 'like', '%' . request('query') . '%');
         }
     }
-}
+} 

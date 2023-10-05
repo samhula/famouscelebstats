@@ -17,7 +17,7 @@
 						</form>
 					</li>
 					@else
-					<li class="text-white"><a href="{{config('global.constants.URL')}}/categories">Categories</a></li>
+					<!-- <li class="text-white"><a href="{{config('global.constants.URL')}}/categories">Categories</a></li> -->
 					<li class="text-white"><a href="{{config('global.constants.URL')}}">About</a></li>
 					<li class="text-white"><a href="{{config('global.constants.URL')}}">Contact</a></li>
 					@endauth

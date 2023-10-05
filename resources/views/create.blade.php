@@ -54,6 +54,14 @@
 					@enderror
 				</div>
 				<div class="flex flex-col">
+					<label class="font-semibold uppercase text-sm" for="img_credit">Image Credit</label>
+					<input type="text" name="img_credit" id="img_credit" placeholder="Image Credit" value="{{old('img_credit')}}" class="border outline-none rounded resize-none p-2 focus:ring focus:ring-indigo-700 bg-gray-200 focus:bg-white placeholder:italic">
+
+					@error('img_credit')
+						<p class="text-red-500 mt-1">{{$message}}</p>
+					@enderror
+				</div>
+				<div class="flex flex-col">
 					<label class="font-semibold uppercase text-sm" for="full_name">Full Name</label>
 					<input type="text" name="full_name" id="full_name" placeholder="Full Name" value="{{old('full_name')}}" class="border outline-none rounded resize-none p-2 focus:ring focus:ring-indigo-700 bg-gray-200 focus:bg-white placeholder:italic">
 
@@ -94,7 +102,7 @@
 					@enderror
 				</div>
 				<div class="flex flex-col">
-					<label class="font-semibold uppercase text-sm" for="net-worth">Height</label>
+					<label class="font-semibold uppercase text-sm" for="height">Height</label>
 					<input type="text" name="height" id="height" placeholder="Height" value="{{old('height')}}" class="border outline-none rounded resize-none p-2 focus:ring focus:ring-indigo-700 bg-gray-200 focus:bg-white placeholder:italic">
 
 					@error('height')

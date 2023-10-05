@@ -67,5 +67,5 @@
 		</div>
 	</main>
 </body>
-<x-footer class="w-full"/>
+<!-- <x-footer class="w-full"/> -->
 </html>

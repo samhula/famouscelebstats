@@ -8,7 +8,7 @@
 			<div class="mb-4 flex flex-row gap-2 items-center">
 				<img src="{{asset('storage/images/' . 'default-avatar-icon-of-social-media-user-vector.jpg')}}" class="rounded-full w-12 h-12">
 				<div class="flex flex-col text-gray-500 text-sm">
-					<p><span>Published 19th July 2023</span></p>
+					<p><span>Published {{$article->updated_at->format('jS M Y')}}</span></p>
 					<p>By <span class="font-semibold text-gray-700">admin</span></p>
 				</div>
 			</div>
@@ -157,5 +157,5 @@
 		</form>
 	</div> -->
 </body>
-<x-footer />
+<!-- <x-footer /> -->
 </html>
